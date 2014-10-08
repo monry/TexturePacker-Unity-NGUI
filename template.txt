@@ -1,0 +1,22 @@
+{
+	"frames": {
+{% for sprite in allSprites %}		"{{sprite.trimmedName}}": {
+			"frame": { "x":{{sprite.frameRect.x}}, "y": {{sprite.frameRect.y}}, "w": {{sprite.frameRect.width}}, "h": {{sprite.frameRect.height}} },
+			"rotated": {{sprite.rotated}},
+			"trimmed": {{sprite.trimmed}},
+			"spriteSourceSize": { "x": {{sprite.cornerOffset.x}}, "y": {{sprite.cornerOffset.y}}, "w": {{sprite.frameRect.width}}, "h": {{sprite.frameRect.height}} },
+			"sourceSize": { "w": {{sprite.sourceRect.width}},"h": {{sprite.sourceRect.height}}}
+		}{% if not forloop.last %},
+{% endif %}{% endfor %}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "{{texture.fullName}}",
+		"format": "{{setting.textureFormat}}",
+		"size": { "w": {{texture.size.width}}, "h": {{texture.size.height}} },
+		"scale": "{{variantParams.scale}}",
+		"smartupdate": "{{smartUpdateKey}}"
+	}
+}
+
