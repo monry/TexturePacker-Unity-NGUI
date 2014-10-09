@@ -5,7 +5,7 @@
 			"rotated": {{sprite.rotated}},
 			"trimmed": {{sprite.trimmed}},
 			"spriteSourceSize": { "x": {{sprite.cornerOffset.x}}, "y": {{sprite.cornerOffset.y}}, "w": {{sprite.frameRect.width}}, "h": {{sprite.frameRect.height}} },
-			"sourceSize": { "w": {{sprite.sourceRect.width}},"h": {{sprite.sourceRect.height}}}
+			"sourceSize": { "w": {{sprite.untrimmedSize.width}},"h": {{sprite.untrimmedSize.height}}}
 		}{% if not forloop.last %},
 {% endif %}{% endfor %}
 	},
